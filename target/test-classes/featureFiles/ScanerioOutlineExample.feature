@@ -31,3 +31,21 @@ Examples:
 
      |email|description|statusCode|
      |test_012@gmail.com|Sample Description 2|401|
+     
+Scenario Outline: Validate Create Customer API with no email and no description
+Given I set a valid auth
+And I do not pass email
+And I do not pass description
+When I send a post request  URI  
+Then I sould get <statusCode> as a status code in response
+
+
+Examples:
+
+     |statusCode|
+     |200|
+
+
+
+
+ 

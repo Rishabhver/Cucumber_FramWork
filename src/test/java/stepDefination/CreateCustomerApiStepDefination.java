@@ -23,6 +23,7 @@ public class CreateCustomerApiStepDefination extends CustomerListeners {
 	RequestSpecification requestSpecification = null;
 	Response response = null;
 	ExtentTest logInfo = null;
+	public static String customerID = null;
 	
 	/*
 	 * In cucumber we have only 2 annotations: -
@@ -34,7 +35,7 @@ public class CreateCustomerApiStepDefination extends CustomerListeners {
 	 * 
 	 */
 	
-	@Before("@CresteCustomerAPI")
+	@Before(order=0)
 	public void beforeCreateCustomerAPIScenario(cucumber.api.Scenario scenario) {
 		System.out.println("Scenario.getId()-->" + scenario.getId());
 		String[] splitedName = scenario.getId().split("/");
@@ -192,7 +193,8 @@ public class CreateCustomerApiStepDefination extends CustomerListeners {
 	public void the_Customer_id_field_should_not_be_null() {
 		
 		Assert.assertNotNull(response.jsonPath().get("id"));
-		
+		 customerID = response.jsonPath().get("id");
+		System.out.println("Customer ID is ---> " + customerID);
 		try {
 
 			 logInfo = test.createNode(new GherkinKeyword("Given"), "The should get id the description in response");
@@ -204,5 +206,21 @@ public class CreateCustomerApiStepDefination extends CustomerListeners {
 		}
 	    
 	}
+	
+	@Given("I do not pass email")
+	public void i_do_not_pass_email() {
+	    
+		requestSpecification.formParam("email", "");
+	   
+	}
+
+	@Given("I do not pass description")
+	public void i_do_not_pass_description() {
+	    
+		requestSpecification.formParam("description", "");
+	   
+	}
+
+	
 }
 

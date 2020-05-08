@@ -23,5 +23,8 @@ public interface ConfigProperty extends Mutable{
 	 
 	 @Key("customerApiEndPoint")
 	 public String getCustomerApiEndPoint();
+	 
+	 @Key("customerID")
+	 public String getCustomerID();
 	
 }

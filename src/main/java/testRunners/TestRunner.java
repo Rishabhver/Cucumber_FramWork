@@ -17,8 +17,8 @@ package testRunners;
 
 	@CucumberOptions(
 			
-			features= "./src/test/resources/featureFiles",
-			glue = {"stepDefination"}
+			features= "./src/test/resources/featureFiles/",
+			glue = {"stepDefination/"}
 			
 			)
 	public class TestRunner {

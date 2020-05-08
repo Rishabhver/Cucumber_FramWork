@@ -7,6 +7,20 @@
   <test name="TestNg">
     <classes>
       <class name="testRunners.TestRunner"/>
+      <class name="stepDefination.CreateCustomerApiStepDefination"/>
+      <class name="customListerners.ExtentReportListener"/>
+      <class name="stepDefination.DeleteCustomerApiStepDefination"/>
     </classes>
   </test> <!-- TestNg -->
+  <test name="TestNg(failed)">
+    <classes>
+      <class name="testRunners.TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- testRunners.TestRunner -->
+    </classes>
+  </test> <!-- TestNg(failed) -->
 </suite> <!-- Failed suite [Suite] -->

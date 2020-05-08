@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestNg</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 08 01:16:40 IST 2020</td>
+<td>Started on:</td><td>Sat May 09 00:27:53 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6080 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12418 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,32 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testRunners.TestRunner.feature()'><b>feature</b><br>Test class: testRunners.TestRunner<br>Parameters: "Validate delete customer API with valid auth and valid customer ID", "Validate delete customer API"</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at stepDefination.DeleteCustomerApiStepDefination.i_should_get_status_code_in_the_response(DeleteCustomerApiStepDefination.java:86)
+	at ?.I should get status code 200 in the response(./src/test/resources/featureFiles/DeleteCustomerApi.feature:8)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace999221400", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace999221400'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at stepDefination.DeleteCustomerApiStepDefination.i_should_get_status_code_in_the_response(DeleteCustomerApiStepDefination.java:86)
+	at ?.I should get status code 200 in the response(./src/test/resources/featureFiles/DeleteCustomerApi.feature:8)
+</pre></div></td>
+<td>5</td>
+<td>testRunners.TestRunner@783e6358</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,13 +103,23 @@ function toggleAllBoxes() {
 <tr>
 <td title='testRunners.TestRunner.feature()'><b>feature</b><br>Test class: testRunners.TestRunner<br>Parameters: "Validate Create Customer API with Valid Auth Key and data", "Validate Create Customer API"</td>
 <td></td>
-<td>4</td>
-<td>testRunners.TestRunner@59a6e353</td></tr>
+<td>2</td>
+<td>testRunners.TestRunner@783e6358</td></tr>
 <tr>
 <td title='testRunners.TestRunner.feature()'><b>feature</b><br>Test class: testRunners.TestRunner<br>Parameters: "Validate Create Customer API with InValid Auth Key and data", "Validate Create Customer API"</td>
 <td></td>
 <td>0</td>
-<td>testRunners.TestRunner@59a6e353</td></tr>
+<td>testRunners.TestRunner@783e6358</td></tr>
+<tr>
+<td title='testRunners.TestRunner.feature()'><b>feature</b><br>Test class: testRunners.TestRunner<br>Parameters: "Validate Create Customer API with no email and no description", "Validate Create Customer API"</td>
+<td></td>
+<td>0</td>
+<td>testRunners.TestRunner@783e6358</td></tr>
+<tr>
+<td title='testRunners.TestRunner.feature()'><b>feature</b><br>Test class: testRunners.TestRunner<br>Parameters: "Verify Update Customer API with valid data", "Update CustomerInfo API"</td>
+<td></td>
+<td>1</td>
+<td>testRunners.TestRunner@783e6358</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6080" started-at="2020-05-07T19:46:40Z" finished-at="2020-05-07T19:46:46Z">
+  <suite name="Suite" duration-ms="12418" started-at="2020-05-08T18:57:53Z" finished-at="2020-05-08T18:58:06Z">
     <groups>
     </groups>
-    <test name="TestNg" duration-ms="6080" started-at="2020-05-07T19:46:40Z" finished-at="2020-05-07T19:46:46Z">
+    <test name="TestNg" duration-ms="12418" started-at="2020-05-08T18:57:53Z" finished-at="2020-05-08T18:58:06Z">
       <class name="testRunners.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testRunners.TestRunner@59a6e353]" name="setUpClass" is-config="true" duration-ms="153" started-at="2020-05-08T01:16:41Z" finished-at="2020-05-08T01:16:41Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testRunners.TestRunner@783e6358]" name="setUpClass" is-config="true" duration-ms="139" started-at="2020-05-09T00:27:54Z" finished-at="2020-05-09T00:27:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@59a6e353]" name="feature" duration-ms="4194" started-at="2020-05-08T01:16:41Z" data-provider="features" finished-at="2020-05-08T01:16:45Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@783e6358]" name="feature" duration-ms="5670" started-at="2020-05-09T00:27:54Z" data-provider="features" finished-at="2020-05-09T00:28:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate delete customer API with valid auth and valid customer ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate delete customer API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at stepDefination.DeleteCustomerApiStepDefination.i_should_get_status_code_in_the_response(DeleteCustomerApiStepDefination.java:86)
+	at ✽.I should get status code 200 in the response(./src/test/resources/featureFiles/DeleteCustomerApi.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@783e6358]" name="feature" duration-ms="2641" started-at="2020-05-09T00:28:00Z" data-provider="features" finished-at="2020-05-09T00:28:03Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@59a6e353]" name="feature" duration-ms="776" started-at="2020-05-08T01:16:45Z" data-provider="features" finished-at="2020-05-08T01:16:46Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@783e6358]" name="feature" duration-ms="672" started-at="2020-05-09T00:28:03Z" data-provider="features" finished-at="2020-05-09T00:28:03Z">
           <params>
             <param index="0">
               <value>
@@ -43,7 +76,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testRunners.TestRunner@59a6e353]" name="tearDownClass" is-config="true" duration-ms="15" started-at="2020-05-08T01:16:46Z" finished-at="2020-05-08T01:16:46Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@783e6358]" name="feature" duration-ms="995" started-at="2020-05-09T00:28:03Z" data-provider="features" finished-at="2020-05-09T00:28:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Create Customer API with no email and no description"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate Create Customer API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunners.TestRunner@783e6358]" name="feature" duration-ms="1272" started-at="2020-05-09T00:28:04Z" data-provider="features" finished-at="2020-05-09T00:28:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Update Customer API with valid data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Update CustomerInfo API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testRunners.TestRunner@783e6358]" name="tearDownClass" is-config="true" duration-ms="60" started-at="2020-05-09T00:28:05Z" finished-at="2020-05-09T00:28:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
